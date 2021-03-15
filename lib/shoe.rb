@@ -7,8 +7,16 @@ class Shoe
 
   def initialize(brand)
     @brand = brand
-    BRANDS << brand
-    BRANDS.uniq!
+    # BRANDS << brand while !BRANDS.include?(brand)
+    BRANDS << brand unless BRANDS.include?(brand) #unless it's true
+    # BRANDS << brand if !BRANDS.include?(brand) # bang symbol (!) returns false on the IF statement
+    # if BRANDS.include?(brand)
+    #   BRANDS
+    # else
+    # BRANDS << brand
+    # end
+    # binding.pry
+    # BRANDS.uniq!
   end
 
   def cobble
